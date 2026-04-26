@@ -129,7 +129,7 @@ export default function MiguelThirty3LinkHub() {
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_12%_12%,rgba(42,157,143,0.24),transparent_22%),radial-gradient(circle_at_92%_12%,rgba(233,196,106,0.28),transparent_20%),radial-gradient(circle_at_70%_88%,rgba(231,111,81,0.15),transparent_24%)]" />
             <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(90deg,transparent_0,transparent_72px,rgba(38,70,83,0.035)_73px,transparent_74px)]" />
 
-            <section className="relative mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-6xl items-center gap-8 lg:grid-cols-[0.92fr_1.08fr]">
+            <section className="relative mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-6xl items-start gap-8 lg:grid-cols-[0.92fr_1.08fr]">
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -192,9 +192,13 @@ export default function MiguelThirty3LinkHub() {
                                     <div className={`mb-2 text-[10px] font-black uppercase tracking-[0.22em] ${link.highlight ? "text-white/70" : "text-slate-400"}`}>
                                         {link.kicker}
                                     </div>
-                                    <div className="text-xl font-black tracking-tight md:text-2xl">
-                                        {link.title}
-                                    </div>
+                                    <div
+  className={`text-xl font-black tracking-tight md:text-2xl ${
+    link.highlight ? "text-white" : "text-[#264653]"
+  }`}
+>
+  {link.title}
+</div>
                                     <p className={`mt-2 max-w-xl text-sm leading-6 ${link.highlight ? "text-white/82" : "text-slate-600"}`}>
                                         {link.desc}
                                     </p>
